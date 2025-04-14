@@ -1,4 +1,4 @@
-// Copyright 2025, MS-Cheminformatics LLC, The University of Osaka and contributors
+// Copyright 2025, MS-Cheminformatics LLC
 // Licensed under the MIT License:
 //
 // Permission is hereby granted, free of charge, to any person obtaining a copy
