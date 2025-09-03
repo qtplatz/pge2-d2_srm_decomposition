@@ -29,6 +29,7 @@ extern std::vector< std::tuple< double, double, double, double, double > > __dat
 int
 main()
 {
+#if 0
     constexpr int ndim = 4;
     constexpr int nprod = 2;
 
@@ -40,12 +41,13 @@ main()
         /*315.2 */        , 0.8814,     0.7894
         /*333.2 */        , 0.6829,     0.2003
         ;
-
+#else
+#endif
     double rms = 1.0; //
     auto covMatrix = rms*rms * (A.transpose() * A).inverse();
 
     auto propagatedErrors = covMatrix.diagonal().array().sqrt();
-    std::cout << "proparaged rms errors: \n" << propagatedErrors << std::endl;
+    std::cout << "propagated rms errors: \n" << propagatedErrors << std::endl;
 
     auto peakd = adprocessor::PeakDecomposition< double, ndim, nprod >( A );
 
